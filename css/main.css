@@ -131,18 +131,26 @@ nav .container ul .active a {
 
 .search__section .search-box ::-webkit-input-placeholder {
   padding-left: 1px;
+  font-size: 12px;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 
 .search__section .search-box :-ms-input-placeholder {
   padding-left: 1px;
+  font-size: 12px;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 
 .search__section .search-box ::-ms-input-placeholder {
   padding-left: 1px;
+  font-size: 12px;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 
 .search__section .search-box ::placeholder {
   padding-left: 1px;
+  font-size: 12px;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 
 .search__section .search-box__input {
@@ -191,8 +199,8 @@ nav .container ul .active a {
   position: relative;
   top: 0;
   left: -0.2em;
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 100%;
   border: 2px solid #c4c4c4;
   background-color: #fff;
