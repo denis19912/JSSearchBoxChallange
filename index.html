@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>DataBox FE demo project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <div class="content">
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <img src="./img/logo.png" alt="" />
+          <a class="logo">PLATFORM ADMIN</a> 
+        </div>
+        <ul>
+          <li class="nav__logo-position-end">FILTER:</li>
+          <li class="active"><a href="">All</a></li>
+          <li><a href="">Free</a></li>
+          <li><a href="">Paying</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="search__section">
+      <div class="container">
+        <div class="search-box" style="font-size: 24px;">
+          <input class="search-box__input" type="text" placeholder="search" oninput="this.setAttribute('value',this.value)">
+          <i></i>
+        </div>
+        <button>Create Account</button>
+      </div>
+    </section>
+    <section class="main-content__section">
+      <div class="container">
+        <table id="main-content__tabel">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Company Name</th>
+              <th>Owner email</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>11052</td>
+            <td>Maria Anders</td>
+            <td>des@des.com</td>
+          </tr>
+          <tr>
+            <td>11052</td>
+            <td>Christina Berglund</td>
+            <td>janko.petek@gmail.com</td>
+          </tr>
+          <tr>
+            <td>11052</td>
+            <td>Francisco Chang</td>
+            <td>sara@google.com</td>
+          </tr>
+          <tr>
+            <td>11052</td>
+            <td>Roland Mendel</td>
+            <td>miha@outlook.com</td>
+          </tr>
+          <tr>
+            <td>11052</td>
+            <td>Helen Bennett</td>
+            <td>marta@marta.si</td>
+          </tr>
+        </table>
+
+      </div>
+    </section>
+    
+  </div>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
