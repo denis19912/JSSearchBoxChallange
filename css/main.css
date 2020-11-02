@@ -59,7 +59,9 @@ nav .container .logo {
 }
 
 nav .container .logo img {
-  padding-right: 10px;
+  max-height: 22px;
+  margin-top: 5px;
+  margin-right: 4.5px;
 }
 
 nav .container ul {
