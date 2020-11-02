@@ -308,135 +308,6 @@ nav .container ul .active a {
   transition: 0.5s;
 }
 
-/*
-  Media Queries.
-*/
-@media screen and (max-width: 499.9px) {
-  .container {
-    padding: 0 20px;
-  }
-  nav {
-    height: 13vh;
-  }
-  nav .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  nav .container .logo {
-    margin-top: 10px;
-  }
-  nav .container .logo img {
-    margin-top: 10px;
-  }
-  .search__section .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 1rem;
-  }
-  .search__section .search-box__input {
-    width: 100%;
-  }
-  .search__section button {
-    width: 100%;
-    padding: 10px 0;
-    margin-top: 2rem;
-  }
-  .main-content__section {
-    margin-top: 7rem;
-  }
-  .main-content__section #main-content__tabel {
-    /* Force table to be inline for readability. */
-    /* Hide table headers. */
-    /*
-        Labels the rows so we know what 
-        data we are looking at.
-      */
-  }
-  .main-content__section #main-content__tabel table,
-  .main-content__section #main-content__tabel thead,
-  .main-content__section #main-content__tabel tbody,
-  .main-content__section #main-content__tabel th,
-  .main-content__section #main-content__tabel td,
-  .main-content__section #main-content__tabel tr {
-    display: block;
-    padding: 10px 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .main-content__section #main-content__tabel thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-  .main-content__section #main-content__tabel tr {
-    margin: 0 0 1rem 0;
-  }
-  .main-content__section #main-content__tabel tr:nth-child(odd) {
-    background: #ccc;
-  }
-  .main-content__section #main-content__tabel td {
-    /* Behave  like a row. */
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 50%;
-  }
-  .main-content__section #main-content__tabel td:before {
-    /* Now like a table header. */
-    position: absolute;
-    /* Top/left values mimic padding. */
-    top: 0;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-  }
-  .main-content__section #main-content__tabel td:nth-of-type(1):before {
-    content: "ID";
-  }
-  .main-content__section #main-content__tabel td:nth-of-type(2):before {
-    content: "Company Name";
-  }
-  .main-content__section #main-content__tabel td:nth-of-type(3):before {
-    content: "Owner email";
-  }
-}
-
-/*
-  Devices up to 1050px.
-*/
-@media screen and (max-width: 1050px) {
-  .container {
-    padding: 0 50px;
-  }
-}
-
-/*
-  Devices above 1050px.
-*/
-@media screen and (min-width: 499.9px) {
-  .search__section {
-    max-height: 67px;
-  }
-  .main-content__section #main-content__tabel tr th:first-child,
-  .main-content__section #main-content__tabel tr td:first-child {
-    padding-left: 25px;
-    width: 120px;
-  }
-  .main-content__section #main-content__tabel tr th:nth-child(2),
-  .main-content__section #main-content__tabel tr td:nth-child(2) {
-    width: 220px;
-  }
-}
-
 .hidden {
   display: none;
 }
@@ -519,6 +390,155 @@ Animations for search.
   }
   52% {
     opacity: 0;
+  }
+}
+
+/*
+  Media Queries.
+*/
+@media screen and (max-width: 499.9px) {
+  .container {
+    padding: 0 20px !important;
+  }
+  nav {
+    height: 13vh;
+  }
+  nav .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .container .logo {
+    margin-top: 10px;
+  }
+  nav .container .logo img {
+    margin-top: 10px;
+  }
+  .search__section .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 1rem;
+  }
+  .search__section .search-box__input {
+    width: 100%;
+  }
+  .search__section button {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 2rem;
+  }
+  .main-content__section {
+    margin-top: 2rem;
+  }
+  .main-content__section #main-content__tabel {
+    /* Force table to be inline for readability. */
+    /* Hide table headers. */
+    /*
+        Labels the rows so we know what 
+        data we are looking at.
+      */
+  }
+  .main-content__section #main-content__tabel table,
+  .main-content__section #main-content__tabel thead,
+  .main-content__section #main-content__tabel tbody,
+  .main-content__section #main-content__tabel th,
+  .main-content__section #main-content__tabel td,
+  .main-content__section #main-content__tabel tr {
+    display: block;
+    padding: 15px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__section #main-content__tabel table:hover,
+  .main-content__section #main-content__tabel thead:hover,
+  .main-content__section #main-content__tabel tbody:hover,
+  .main-content__section #main-content__tabel th:hover,
+  .main-content__section #main-content__tabel td:hover,
+  .main-content__section #main-content__tabel tr:hover {
+    overflow: visible;
+  }
+  .main-content__section #main-content__tabel thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .main-content__section #main-content__tabel tr {
+    margin: 0 0 1rem 0;
+  }
+  .main-content__section #main-content__tabel tr:nth-child(odd) {
+    background: #ccc;
+  }
+  .main-content__section #main-content__tabel tr:nth-child(even) {
+    background: #e7e7e7;
+  }
+  .main-content__section #main-content__tabel td {
+    /* Behave  like a row. */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  .main-content__section #main-content__tabel td:before {
+    /* Now like a table header. */
+    position: absolute;
+    /* Top/left values mimic padding. */
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  .main-content__section #main-content__tabel td:nth-of-type(1):before {
+    padding: 15px 0;
+    content: "ID";
+  }
+  .main-content__section #main-content__tabel td:nth-of-type(2):before {
+    padding: 15px 0;
+    content: "Company Name";
+  }
+  .main-content__section #main-content__tabel td:nth-of-type(3):before {
+    padding: 15px 0;
+    content: "Owner email";
+  }
+  #loading {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+/*
+  Devices up to 1050px.
+*/
+@media screen and (max-width: 1050px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+/*
+  Devices above 1050px.
+*/
+@media screen and (min-width: 499.9px) {
+  .search__section {
+    max-height: 67px;
+  }
+  .main-content__section #main-content__tabel tr th:first-child,
+  .main-content__section #main-content__tabel tr td:first-child {
+    padding-left: 25px;
+    width: 120px;
+  }
+  .main-content__section #main-content__tabel tr th:nth-child(2),
+  .main-content__section #main-content__tabel tr td:nth-child(2) {
+    width: 220px;
   }
 }
 /*# sourceMappingURL=main.css.map */

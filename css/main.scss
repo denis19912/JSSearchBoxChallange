@@ -228,143 +228,6 @@ nav {
   }
 }
 
-/*
-  Media Queries.
-*/
-
-// Mobile optimization.
-@media screen and (max-width: $mWidthMobile) {
-  .container {
-    padding: 0 20px;
-  }
-
-  nav {
-    height: 13vh;
-    .container {
-      flex-direction: column;
-      align-items: center;
-      .logo {
-        margin-top: 10px;
-        img {
-          margin-top: 10px;
-        }
-      }
-    }
-  } // Nav.
-
-  .search__section {
-    .container {
-      flex-direction: column;
-      margin-top: 1rem;
-    }
-
-    .search-box__input {
-      width: 100%;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px 0;
-      margin-top: 2rem;
-    }
-  }
-
-  .main-content__section {
-    margin-top: 7rem;
-    #main-content__tabel {
-      /* Force table to be inline for readability. */
-      table,
-      thead,
-      tbody,
-      th,
-      td,
-      tr {
-        display: block;
-        padding: 10px 0;
-        align-items: center;
-      }
-
-      /* Hide table headers. */
-      thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-
-      tr {
-        margin: 0 0 1rem 0;
-      }
-      tr:nth-child(odd) {
-        background: #ccc;
-      }
-
-      td {
-        /* Behave  like a row. */
-        border: none;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        padding-left: 50%;
-      }
-
-      td:before {
-        /* Now like a table header. */
-        position: absolute;
-        /* Top/left values mimic padding. */
-        top: 0;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-      }
-
-      /*
-        Labels the rows so we know what 
-        data we are looking at.
-      */
-      td:nth-of-type(1):before {
-        content: "ID";
-      }
-      td:nth-of-type(2):before {
-        content: "Company Name";
-      }
-      td:nth-of-type(3):before {
-        content: "Owner email";
-      }
-    }
-  }
-}
-
-/*
-  Devices up to 1050px.
-*/
-@media screen and (max-width: $mWidthMedium) {
-  .container {
-    padding: 0 50px;
-  }
-}
-
-/*
-  Devices above 1050px.
-*/
-@media screen and (min-width: $mWidthMobile) {
-  .search__section {
-    max-height: 67px;
-  }
-  .main-content__section {
-    #main-content__tabel {
-      tr th:first-child,
-      tr td:first-child {
-        padding-left: 25px;
-        width: 120px;
-      }
-      tr th:nth-child(2),
-      tr td:nth-child(2) {
-        width: 220px;
-      }
-    }
-  }
-}
-
 // Helpers to switch loading and table.
 .hidden {
   display: none;
@@ -419,5 +282,158 @@ Animations for search.
   }
   52% {
     opacity: 0;
+  }
+}
+
+/*
+  Media Queries.
+*/
+
+// Mobile optimization.
+@media screen and (max-width: $mWidthMobile) {
+  .container {
+    padding: 0 20px !important;
+  }
+
+  nav {
+    height: 13vh;
+    .container {
+      flex-direction: column;
+      align-items: center;
+      .logo {
+        margin-top: 10px;
+        img {
+          margin-top: 10px;
+        }
+      }
+    }
+  } // Nav.
+
+  .search__section {
+    .container {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+
+    .search-box__input {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px 0;
+      margin-top: 2rem;
+    }
+  }
+
+  .main-content__section {
+    margin-top: 2rem;
+    #main-content__tabel {
+      /* Force table to be inline for readability. */
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+        padding: 15px 0;
+        align-items: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        // On hover shows email.
+        &:hover {
+          overflow: visible;
+        }
+      }
+
+      /* Hide table headers. */
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      tr {
+        margin: 0 0 1rem 0;
+      }
+      tr:nth-child(odd) {
+        background: #ccc;
+      }
+      tr:nth-child(even) {
+        background: rgb(231, 231, 231);
+      }
+
+      td {
+        /* Behave  like a row. */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td:before {
+        /* Now like a table header. */
+        position: absolute;
+        /* Top/left values mimic padding. */
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+      }
+
+      /*
+        Labels the rows so we know what 
+        data we are looking at.
+      */
+      td:nth-of-type(1):before {
+        padding: 15px 0;
+        content: "ID";
+      }
+      td:nth-of-type(2):before {
+        padding: 15px 0;
+        content: "Company Name";
+      }
+      td:nth-of-type(3):before {
+        padding: 15px 0;
+        content: "Owner email";
+      }
+    }
+  }
+  #loading {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+/*
+  Devices up to 1050px.
+*/
+@media screen and (max-width: $mWidthMedium) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+/*
+  Devices above 1050px.
+*/
+@media screen and (min-width: $mWidthMobile) {
+  .search__section {
+    max-height: 67px;
+  }
+  .main-content__section {
+    #main-content__tabel {
+      tr th:first-child,
+      tr td:first-child {
+        padding-left: 25px;
+        width: 120px;
+      }
+      tr th:nth-child(2),
+      tr td:nth-child(2) {
+        width: 220px;
+      }
+    }
   }
 }
