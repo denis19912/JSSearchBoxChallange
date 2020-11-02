@@ -197,6 +197,8 @@ nav {
 */
 .main-content__section {
   margin-top: 37px;
+  position: relative;
+  min-height: 80vh;
   #main-content__tabel {
     width: 100%;
     border-collapse: collapse;
@@ -402,8 +404,7 @@ Animations for search.
     }
   }
   #loading {
-    top: auto;
-    bottom: 0;
+    transform: translate(-50%, -90%);
   }
 }
 

@@ -269,6 +269,8 @@ nav .container ul .active a {
 */
 .main-content__section {
   margin-top: 37px;
+  position: relative;
+  min-height: 80vh;
 }
 
 .main-content__section #main-content__tabel {
@@ -510,8 +512,8 @@ Animations for search.
     content: "Owner email";
   }
   #loading {
-    top: auto;
-    bottom: 0;
+    -webkit-transform: translate(-50%, -90%);
+            transform: translate(-50%, -90%);
   }
 }
 
