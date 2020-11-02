@@ -76,27 +76,33 @@ nav .container ul {
 }
 
 nav .container ul li {
-  display: block;
   color: #80c4da;
   text-align: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 13px 9px;
+  padding: 0;
 }
 
 nav .container ul li a {
   font-size: 11px;
   color: inherit;
   text-decoration: none;
+  display: inline-block;
+  padding: 11.5px 10px;
+  height: 100%;
 }
 
 nav .container ul li a:hover:not(.active) {
   color: #fff;
 }
 
+nav .container ul li:first-child {
+  padding-right: 7px;
+}
+
 nav .container ul li:last-child {
-  padding-right: 16px;
+  padding-right: 8px;
 }
 
 nav .container ul .active {
@@ -238,7 +244,7 @@ nav .container ul .active a {
   font-size: 14px;
   border: 0;
   color: #fff;
-  padding: 0 19px;
+  padding: 0 17px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -287,7 +293,7 @@ nav .container ul .active a {
   color: #000;
 }
 
-.main-content__section #main-content__tabel tr:hover {
+.main-content__section #main-content__tabel tbody tr:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: rgba(0, 0, 0, 0.05);
@@ -427,9 +433,59 @@ nav .container ul .active a {
   }
 }
 
+#loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
 /*
-  Animations
+Animations
 */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 @-webkit-keyframes blink {
   49% {
     opacity: 0;
@@ -444,6 +500,7 @@ nav .container ul .active a {
     opacity: 0;
   }
 }
+
 @keyframes blink {
   49% {
     opacity: 0;

@@ -55,21 +55,26 @@ nav {
       display: flex;
       justify-content: flex-end;
       li {
-        display: block;
         color: #80c4da;
         text-align: center;
         align-self: center;
-        padding: 13px 9px;
+        padding: 0;
         a {
           font-size: 11px;
           color: inherit;
           text-decoration: none;
+          display: inline-block;
+          padding: 11.5px 10px;
+          height: 100%;
           &:hover:not(.active) {
             color: #fff;
           }
         }
+        &:first-child {
+          padding-right: 7px;
+        }
         &:last-child {
-          padding-right: 16px;
+          padding-right: 8px;
         }
       }
       .active {
@@ -169,7 +174,7 @@ nav {
     font-size: 14px;
     border: 0;
     color: #fff;
-    padding: 0 19px;
+    padding: 0 17px;
     border-radius: 5px;
     cursor: pointer;
     &:hover {
@@ -209,7 +214,7 @@ nav {
       color: #000;
     }
   }
-  #main-content__tabel tr:hover {
+  #main-content__tabel tbody tr:hover {
     transition: 0.5s;
     background-color: rgba(0, 0, 0, 0.05);
   }
@@ -354,9 +359,43 @@ nav {
     }
   }
 }
+
+#loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
 /*
-  Animations
+Animations
 */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes blink {
   49% {
     opacity: 0;
