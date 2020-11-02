@@ -25,7 +25,7 @@ body {
 }
 
 /*
-  Navigation
+  Navigation.
 */
 nav {
   max-width: 100%;
@@ -115,7 +115,7 @@ nav .container ul .active a {
 }
 
 /*
-  Search section
+  Search section.
 */
 .search__section {
   padding: 17px 0;
@@ -139,24 +139,28 @@ nav .container ul .active a {
   padding-left: 1px;
   font-size: 12px;
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  color: #c4c4c4;
 }
 
 .search__section .search-box :-ms-input-placeholder {
   padding-left: 1px;
   font-size: 12px;
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  color: #c4c4c4;
 }
 
 .search__section .search-box ::-ms-input-placeholder {
   padding-left: 1px;
   font-size: 12px;
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  color: #c4c4c4;
 }
 
 .search__section .search-box ::placeholder {
   padding-left: 1px;
   font-size: 12px;
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  color: #c4c4c4;
 }
 
 .search__section .search-box__input {
@@ -261,7 +265,7 @@ nav .container ul .active a {
 }
 
 /*
-  Main section container
+  Main section container.
 */
 .main-content__section {
   margin-top: 37px;
@@ -305,7 +309,7 @@ nav .container ul .active a {
 }
 
 /*
-  Media Queries
+  Media Queries.
 */
 @media screen and (max-width: 499.9px) {
   .container {
@@ -348,12 +352,12 @@ nav .container ul .active a {
     margin-top: 7rem;
   }
   .main-content__section #main-content__tabel {
-    /* Force table to not be like tables anymore */
-    /* Hide table headers (but not display: none;, for accessibility) */
+    /* Force table to be inline for readability. */
+    /* Hide table headers. */
     /*
-		Label the data
-    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
-		*/
+        Labels the rows so we know what 
+        data we are looking at.
+      */
   }
   .main-content__section #main-content__tabel table,
   .main-content__section #main-content__tabel thead,
@@ -379,16 +383,16 @@ nav .container ul .active a {
     background: #ccc;
   }
   .main-content__section #main-content__tabel td {
-    /* Behave  like a "row" */
+    /* Behave  like a row. */
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
     padding-left: 50%;
   }
   .main-content__section #main-content__tabel td:before {
-    /* Now like a table header */
+    /* Now like a table header. */
     position: absolute;
-    /* Top/left values mimic padding */
+    /* Top/left values mimic padding. */
     top: 0;
     left: 6px;
     width: 45%;
@@ -407,7 +411,7 @@ nav .container ul .active a {
 }
 
 /*
-  Devices up to 1050px
+  Devices up to 1050px.
 */
 @media screen and (max-width: 1050px) {
   .container {
@@ -416,7 +420,7 @@ nav .container ul .active a {
 }
 
 /*
-  Devices above to 1050px
+  Devices above 1050px.
 */
 @media screen and (min-width: 499.9px) {
   .search__section {
@@ -433,6 +437,14 @@ nav .container ul .active a {
   }
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 #loading {
   position: fixed;
   top: 50%;
@@ -440,14 +452,6 @@ nav .container ul .active a {
   /* bring your own prefixes */
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.hidden {
-  display: none;
-}
-
-.visible {
-  display: block;
 }
 
 .loader {
@@ -463,7 +467,7 @@ nav .container ul .active a {
 }
 
 /*
-Animations
+Animations for spinner.
 */
 @-webkit-keyframes spin {
   0% {
@@ -486,6 +490,9 @@ Animations
   }
 }
 
+/*
+Animations for search.
+*/
 @-webkit-keyframes blink {
   49% {
     opacity: 0;
@@ -500,7 +507,6 @@ Animations
     opacity: 0;
   }
 }
-
 @keyframes blink {
   49% {
     opacity: 0;

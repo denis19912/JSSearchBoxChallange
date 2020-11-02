@@ -24,7 +24,7 @@ let tableElement = document.getElementById("main-content__tabel");
 const loadingElement = document.getElementById("loading");
 const tableBodyElement = document.getElementById("table-body");
 const menuElement = document.getElementsByClassName("menu-click");
-let filterActive = ["1", "2"];
+let filterActive = [1, 2];
 let searchQuery = null;
 
 /**
@@ -47,16 +47,16 @@ Array.from(menuElement).forEach(function(menuElement) {
       const filter = e.target.hash.slice(1);
       // Checks which filter was pressed.
       if (filter === 'free') {
-        filterActive = ["1"];
+        filterActive = [1];
         searchQuery ? getDbQueryDataName(searchQuery) : getDbQueryDataAccountType();
       } else if (filter === 'paying') {
-        filterActive = ["2"];
+        filterActive = [2];
         searchQuery ? getDbQueryDataName(searchQuery) : getDbQueryDataAccountType();
       } else {
         // Resets fields when user clicks on all.
         searchField.value = '';
         searchQuery = null;
-        filterActive = ["1", "2"];
+        filterActive = [1, 2];
         getAllDbData();
       }
     });
