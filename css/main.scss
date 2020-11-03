@@ -123,6 +123,7 @@ nav {
       font-size: 12px;
       box-shadow: 0 0 0.75em 0.25em rgba($inputBgColor, 0.2);
       transition: box-shadow 0.5s ease;
+      min-width: 233px;
       // Adds shadow to input
       &:hover,
       &:focus {

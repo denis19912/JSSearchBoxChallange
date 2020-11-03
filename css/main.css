@@ -179,6 +179,7 @@ nav .container ul .active a {
   transition: -webkit-box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
+  min-width: 233px;
 }
 
 .search__section .search-box__input:hover, .search__section .search-box__input:focus {
